@@ -12,7 +12,7 @@ COPY src ./src
 RUN cargo build --release
 
 # 运行阶段使用更小的基础镜像
-FROM debian:bullseye
+FROM debian:latest
 
 # 安装运行时依赖
 RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
