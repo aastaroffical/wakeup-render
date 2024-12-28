@@ -1,5 +1,8 @@
 # 使用官方Rust镜像作为构建阶段
-FROM rust:1.75-slim-bullseye AS builder
+FROM rust:latest AS builder
+
+RUN rustup update
+RUN cargo clean
 
 # 设置工作目录
 WORKDIR /app
