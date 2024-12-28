@@ -1,0 +1,16 @@
+[package]
+name = "wakeup-render"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.1"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.10"
+parking_lot = "0.12"
+chrono = { version = "0.4", features = ["serde"] }
+toml = "0.7"

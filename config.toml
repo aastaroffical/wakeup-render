@@ -1,0 +1,8 @@
+target_services = [
+    "https://dvt.onrender.com",
+    "https://dvt-1.onrender.com",
+    "https://dvt-2.onrender.com",
+    "https://anotherairaccountcommunitynode.onrender.com"
+]
+interval_seconds = 300  # 5分钟
+max_retries = 3
