@@ -1,16 +1,12 @@
 # 使用官方Rust镜像作为构建阶段
 FROM rust:latest AS builder
 
-RUN rustup update
-RUN cargo clean
-
 # 设置工作目录
 WORKDIR /app
 
 # 复制项目文件
-COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml config.toml ./
 COPY src ./src
-COPY config.toml ./
 
 # 构建依赖
 RUN cargo build --release
